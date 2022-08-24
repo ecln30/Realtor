@@ -27,9 +27,17 @@ const Search = () => {
             <Flex 
             cursor='pointer'
             bg='gray.100'
+            borderBottom='1px'
+            borderColor='gray.200'
+            fontWeight='black'
+            fontSize='lg'
+            justifyContent='center'
+            alignItems='center'
+            onClick={f=> setSearchFilters(prevFilters => !prevFilters )}
             >
-
-            </Flex>
+            <Text>Search Property By Filters</Text>
+            <Icon paddingLeft='2' w='7' as={BsFilter} />
+           </Flex>
         </Box>
     )
 }
