@@ -37,7 +37,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
              {isVerified && <GoVerified />}
            </Box>
            <Text fontWeight="bold" fontSize="lg">
-            AED &nbsp;  {millify(price)}{rentFrequency && `/${rentFrequency}`}
+            USD &nbsp;  {millify(price)}{rentFrequency && `/${rentFrequency}`}
            </Text>
           </Flex>
           <Box>
