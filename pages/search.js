@@ -40,13 +40,13 @@ const Search = ({properties}) => {
             alignItems='center'
             onClick={f=> setSearchFilters(prevFilters => !prevFilters )}
             >
-            <Text>Search Property By Filters</Text>
+            <Text>OPTION</Text>
             <Icon paddingLeft='2' w='7' as={BsFilter} />
            </Flex>
 
            {searchFilters && <SearchFilters />}
            <Text fontSize='2xl' p='4' fontWeight='bold' >
-            Properties {router.query.purpose}
+             {router.query.purpose}
            </Text>
            <Flex  flexWrap='wrap'>
             {properties.map(property => <Property  property={property} key={property.id} />)}
@@ -77,7 +77,6 @@ export async function getServerSideProps({query}) {
     const categoryExternalID = query.categoryExternalID || '4';
   
     const data = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`);
-  
   
     return {
       props: {

@@ -32,8 +32,8 @@ export default function Home({propertiesForSale, propertiesForRent}) {
        title2="Everyone"
        desc1="Explore Apartments, Villas, Homes"
        desc2="and more"
-       buttonText="Explore Renting"
-       linkName="/search?purpose=for-rent"
+       buttonText="Explore Rent"
+       linkName="/search?purpose=rantal"
        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
        />
       <Flex flexWrap='wrap'>
@@ -45,8 +45,8 @@ export default function Home({propertiesForSale, propertiesForRent}) {
        title2="Dream Home"
        desc1="Explore Apartments, Villas, Homes"
        desc2="and more"
-       buttonText="Explore Buying"
-       linkName="/search?purpose=for-sale"
+       buttonText="Explore For sale"
+       linkName="/search?purpose=for Sale"
        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
        />
        <Flex flexWrap="wrap">
