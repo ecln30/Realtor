@@ -20,15 +20,47 @@ import {FaArrowAltCircleleft,FaArrowAltCircleRight} from 'react-icons/fa'
 
 const LeftArrow = () => {
     const {scrollPrev} = useContext(VisibilityContext)
+
+    return (
+        <Flex justifyContent='center' alignItems='center' marginRight='1'>
+           <Icon 
+            as={FaArrowAltCircleLeft}
+            onClick={scrollPrev}
+            fontSize='2xl'
+            cursor='pointer'
+           />
+        </Flex>
+    )
 }
 
-const ImageScrollbar = () => (
-    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={overflow: 'hidden'} >
+const RightArrow = () => {
+    const {scrollNext} = useContext(VisibilityContext)
+
+    return (
+        <Flex justifyContent='center' alignItems='center' marginRight='1'>
+           <Icon 
+            as={FaArrowAltCircleRight}
+            onClick={scrollNext}
+            fontSize='2xl'
+            cursor='pointer'
+           />
+        </Flex>
+    )
+}
+
+const ImageScrollbar = ({data}) => (
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={data.map(item => (
+        <Box key={item.id} width='910px' itemId={item.id} overflow='hidden' p='1' >
+          <Image placeholder='blur' blurDataUrl={item.url} src={item.url} width={1000} height={500} alt='propety'
+          sizes='(max-width:500px) 100px, (max-width):1023px 400px, 1000px'
+           />
+        </Box>
+    ))} >
 
     </ScrollMenu>
 )
 
-
+export default ImageScrollbar
 
 
 
